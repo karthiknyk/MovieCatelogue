@@ -1,0 +1,82 @@
+const Color = {
+    primaryColor: '#153a7f',
+    secondaryColor: '#2697d0',
+    yellowLine: '#FED351',
+    yellowDark: '#FF651F',
+    bgContainerColor: '',
+    buttonColor: '#00C800',
+    green: '#70BE45',
+    warning: '#eed202',
+    black: '#0C0C0C',
+    grayText: '#BEBEBE',
+    grayLight: '#F5F5F5',
+    white: '#FFFFFF',
+    fb_blue: '#008575',
+    status_bar: '#00a100',
+    crimson_red: '#DC143C',
+    light_red: '#FF4F4B',
+    danger_Red: '#FF0000',
+    golden_brown: '#996515', Neon_orange: '#FF6700', salad_green: '#227754',
+    yellow: '#FFD700', brown: '#A52A2A',  cream: '#FFFDD0', fawn: '#e5aa70',
+    blue: '#0D41E1', light_blue: '#07C8F9', grass_green: '#ffb703', light_green: '#fb8500', voilet: "#AE208C", pink: '#E9028C',
+    primary: '#018AFC',
+    lighter: '#FAFAFA',
+    light: '#DAE1E7',
+    dark: '#444',
+    gray: '#878787',
+    gray2: '#636366',
+    gray3: '#48484a',
+    gray4: '#3a3a3c',
+    gray5: '#2c2c2e',
+    gray6: '#1c1c1e',
+    lightGray: '#8e8e93',
+    lightGray2: '#aeaeb2',
+    lightGray3: '#c7c7cc',
+    lightGray4: '#d1d1d6',
+    lightGray5: '#e1e1e1',
+    lightGray6: '#f2f2f7',
+    orange_1: '#F5AB56',
+    red_1: '#F55556',
+    purple_1: '#8A56F0',
+    voile_1: '#433D91',
+    green_1: '#4BCE79',
+    blue_1: '#2C2D92',
+    primary_orange: '#ea6503',
+    primary_green: '#0a792f',
+
+    //gradient combinations
+    orangeGradient1: "#f12711", orangeGradient2: "#f5af19",
+    greenGradient1: "#11998e", greenGradient2: "#38ef7d",
+    blueGradient1: "#00B4DB", blueGradient2: "#0083B0",
+    purpleGradient1: "#a8c0ff", purpleGradient2: "#3f2b96",
+    seaBlue1: "#0cebeb", seaBlue2: "#20e3b2", seaBlue3: '#29ffc6',
+    violetGradient1: "#000428", violetGradient2: '#004e92',
+    redGradient1: '#ff4e50', redGradient2: '#f9d423',
+
+    blueGradient: '#40c9ff', pinkGradient: '#e81cff',
+    redGradient: '#e60b09', yellowGradient: '#e9d022',
+    brown_new: '#b3501b',
+    dark_yellow: '#c28625',
+    graish: '#393e4f',
+    light_graish: "#5a6178",
+    darkBg: "#1A1A1A",
+    darkInput: "#2C2C2C",
+
+    darkBackground: "#1F1F1F",
+    cardBackground: "#2C2C2C",
+    elevatedCard: "#333333",
+    textPrimary: "#FFFFFF",
+    textSecondary: "#CCCCCC",
+    textMuted: "#888888",
+    accentPrimary: "#FFA726", // orange
+    accentAlt: "#64B5F6",     // blue
+    border: "#444444",
+    selectedBackground: "#3A3A3A",
+
+    brightOrange:'#FFA500'
+
+
+
+
+}
+export default Color;

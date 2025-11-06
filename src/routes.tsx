@@ -2,22 +2,19 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
-    DrawerItem,
-    useDrawerStatus
+    DrawerItem
 } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { Text, View, Alert, TouchableOpacity } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Alert, Text, TouchableOpacity, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import CenteredImage from './components/CenteredImage';
 import Color from './constants/Color';
 import Home from './screens/Home';
 import SignIn from './screens/SignIn';
-import Animated from 'react-native-reanimated';
-import Images from '../assets/images';
 import { commonStyles } from './constants/CommonStyles';
-import CenteredImage from './components/CenteredImage';
 export const AuthContext = React.createContext();
 
 function SplashScreen() {
@@ -85,8 +82,6 @@ function HomeDrawer() {
                     opacity: 0.6,
                     borderRadius: 0
                 },
-
-
             }}>
             <Drawer.Screen
                 name="Dashboard"
@@ -95,7 +90,7 @@ function HomeDrawer() {
                     headerShown: true,
                     headerTitle: () => (
                         <View >
-                            <Text style={[{ color: Color.black, paddingLeft: 8 }]}>Movie Catelogue</Text>
+                            <Text style={[commonStyles.headerTitle,{ color: Color.black, paddingLeft: 8 }]}>Movie Catelogue</Text>
                         </View>
                     ),
                     headerLeft: () => (

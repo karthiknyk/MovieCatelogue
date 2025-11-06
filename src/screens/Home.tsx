@@ -1,57 +1,3 @@
-// import React,{useState} from "react"
-// import {ActivityIndicator, View,Text,StyleSheet,FlatList} from "react-native"
-// import { useGetMoviesQuery } from "../store/api/movieApi";
-// import MovieCard from "../components/MovieCard";
-
-// const Home = () => {
-//     const [page, setPage] = useState(1);
-//     const [limit] = useState(10); // Load 10 movies per batch
-//     const [search, setSearch] = useState('');
-  
-//     const {
-//       data = [],
-//       isLoading,
-//       isFetching,
-//       refetch,
-//     } = useGetMoviesQuery({ page, limit });
-
-//     if (isLoading) return <ActivityIndicator />;
-//     if (error) return <Text>Error loading movies</Text>;
-  
-
-//     const getHeader=()=>{
-//         return(
-//             <View>
-
-//             </View>
-//         )
-//     }
-//     return (
-//         <View style={styles.container}>
-//         <FlatList
-//           data={data}
-//           keyExtractor={(item) => item.id.toString()}
-//           ListHeaderComponent={getHeader}
-//           renderItem={({ item }) => (
-//             <MovieCard title={item.title} imagepath={item.posterURL} />
-//           )}
-//           numColumns={3}
-//           columnWrapperStyle={{ justifyContent: 'space-between' }}
-//           showsVerticalScrollIndicator={false}
-//         />
-//       </View>
-//     );
-// };
-
-// const styles = StyleSheet.create({
-//     container: { flex: 1, backgroundColor: '#121212', padding: 10 },
-//     center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#121212' },
-//   });
-  
-
-// export default Home;
-
-
 import React, { useState, useMemo, useCallback } from 'react';
 import {
   View,
@@ -140,7 +86,7 @@ export default function Home() {
         ListEmptyComponent={
           <View style={styles.center}>
             {isLoading ? (
-              <ActivityIndicator size="large" color="#007BFF" />
+              <ActivityIndicator testID="ActivityIndicator"  size="large" color="#007BFF" />
             ) : (
               <Text>No movies found.</Text>
             )}
@@ -149,22 +95,12 @@ export default function Home() {
         ListFooterComponent={
           isFetching && page > 1 ? (
             <View style={styles.footer}>
-              <ActivityIndicator size="small" color="#007BFF" />
+              <ActivityIndicator testID="ActivityIndicator"  size="small" color="#007BFF" />
             </View>
           ) : null
         }
         renderItem={({ item }) => (
-        //   <View style={styles.card}>
-        //     <Image
-        //       source={{ uri: item.posterURL || 'https://via.placeholder.com/150' }}
-        //       style={styles.image}
-        //     />
-        //     <Text numberOfLines={2} style={styles.title}>
-        //       {item.title}
-        //     </Text>
-        //   </View>
-
-        <MovieCard item={item} />
+          <MovieCard item={item} />
         )}
       />
     </View>
@@ -181,7 +117,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 12,
     backgroundColor: '#f9f9f9',
-    color:Color.black
+    color: Color.black
   },
   card: {
     backgroundColor: '#f2f2f2',

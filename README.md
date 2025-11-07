@@ -79,7 +79,8 @@ yarn test
 >>>>>>> 5acc84bf7800e30599ca4ed154047c54f8a7ab9d
 Steps to login to the App:
 1. Enter valid mobile number and password
-  Login Instructions:
-  1. use 10 digit mobile number and any 6 digit random password
+
+Login Instructions:
+use 10 digit mobile number and any 6 digit random password
    
 3. In HomePage You can watch all the movie list and search movie by name , Pull to refresh to get latest data.

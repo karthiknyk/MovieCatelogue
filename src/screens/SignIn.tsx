@@ -12,8 +12,9 @@ import { commonStyles } from "../constants/CommonStyles";
 
 const validationSchema = Yup.object({
     mobileNumber: Yup.string()
-        .min(10, "Mobile number must be at least 10 digits")
-        .matches(/^[0-9]+$/, 'Mobile number must contain only digits').required("Mobile number is required"),
+        .matches(/^\d+$/, 'Mobile number must contain only digits')
+        .min(10, 'Mobile number must be at least 10 digits')
+        .required('Mobile number is required'),
     password: Yup.string()
         .matches(/^\S*$/, "Password must not contain spaces")
         .min(6, ({ min }) => `Passowrd must be at least ${min} characters`)
@@ -36,7 +37,8 @@ const SignIn = () => {
     if (isLoading) {
         return (
             <View style={commonStyles.flexCenter}>
-                <ActivityIndicator size={'large'} color={Color.primaryColor} />
+                <ActivityIndicator testID="ActivityIndicator" // 👈 add this
+                    size={'large'} color={Color.primaryColor} />
             </View>
 
         )

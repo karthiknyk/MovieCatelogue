@@ -53,3 +53,36 @@ jest.mock('react-native-gesture-handler', () => {
     }
     return MockLinearGradient;
   });
+
+
+  // Mock NavigationContainer
+jest.mock('@react-navigation/native', () => {
+    const actualNav = jest.requireActual('@react-navigation/native');
+    return {
+      ...actualNav,
+      useNavigation: () => ({
+        navigate: jest.fn(),
+        goBack: jest.fn(),
+      }),
+    };
+  });
+
+  jest.mock('@react-navigation/drawer', () => {
+    return {
+      createDrawerNavigator: jest.fn().mockReturnValue({
+        Navigator: ({ children }: any) => children,
+        Screen: ({ children }: any) => children,
+      }),
+      DrawerContentScrollView: ({ children }: any) => children,
+      DrawerItem: ({ children }: any) => children,
+    };
+  });
+  
+  jest.mock('@react-navigation/native-stack', () => {
+    return {
+      createNativeStackNavigator: jest.fn().mockReturnValue({
+        Navigator: ({ children }: any) => children,
+        Screen: ({ children }: any) => children,
+      }),
+    };
+  });

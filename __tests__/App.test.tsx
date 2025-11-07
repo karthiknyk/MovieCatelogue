@@ -1,13 +1,14 @@
-/**
- * @format
- */
-
 import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 import App from '../App';
+import { Provider } from 'react-redux';
+import { store } from '../src/store/store';
 
 test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
-  });
+  const { toJSON } = render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+  expect(toJSON()).toBeTruthy();
 });
